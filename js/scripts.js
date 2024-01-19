@@ -1,4 +1,4 @@
-let pokemonList = [
+const pokemonList = [
   {
     name: 'Pikachu',
     height: 0.4, // changed to a number
@@ -21,8 +21,13 @@ let pokemonList = [
     name: 'Squirtle',
     height: 0.5,
     type: ['water'], // fixed the typo
-    abilities: ['rain-dish', 'torrent']
-  }]
+    abilities: ['torrent']
+  }
+];
+
+for (let i = 0; i < pokemonList.length; i++) {
+  document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ') ');
+}
 
 
 
