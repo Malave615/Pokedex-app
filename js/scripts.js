@@ -27,19 +27,18 @@ const pokemonRepository = (function () {
     ];
 
     return {
-        add: function (pokemon) {
+        function add(pokemon) {
             if (typeof pokemon === 'object') {
                 pokemonList.push(pokemon);
             } else {
                 console.log('Pokemon is not correct');
             }
         }
-    };
 
-
-    function getAll() {
+        function getAll() {
         return pokemonList;
-    }
+        }
+    };
 })();
 
 pokemonRepository.getAll().forEach(function (pokemon) {
