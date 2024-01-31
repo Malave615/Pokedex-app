@@ -1,4 +1,5 @@
 const pokemonRepository = (function () {
+    "use strict";
     const pokemonList = [
         {
             name: 'Pikachu',
@@ -27,21 +28,22 @@ const pokemonRepository = (function () {
     ];
 
     return {
-        function add(pokemon) {
+        add: function (pokemon) {
             if (typeof pokemon === 'object') {
                 pokemonList.push(pokemon);
             } else {
                 console.log('Pokemon is not correct');
             }
-        }
+        },
 
-        function getAll() {
-        return pokemonList;
+        getAll: function () {
+            return pokemonList;
         }
     };
-})();
+}());
 
 pokemonRepository.getAll().forEach(function (pokemon) {
+    "use strict";
     console.log(pokemon.name + ' is ' + pokemon.height + ' meters tall.');
     console.log(pokemon.type + ' is his type and ' + pokemon.abilities + ' are his abilities. ');
 });
