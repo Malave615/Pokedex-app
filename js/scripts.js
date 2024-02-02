@@ -27,75 +27,46 @@ const pokemonRepository = (function () {
         }
     ];
 
-    return {
-        add: function (pokemon) {
-            if (typeof pokemon === 'object') {
-                pokemonList.push(pokemon);
-            } else {
-                console.log('Pokemon is not correct');
-            }
-        },
-
-        getAll: function () {
-            return pokemonList;
+    function add(pokemon) {
+        if (typeof pokemon === 'object') {
+            pokemonList.push(pokemon);
+        } else {
+            console.log('Pokemon is not correct');
         }
+    }
+
+    function getAll() {
+        return pokemonList;
+    }
+
+    function addListItem(pokemon) {
+        let ulItem = document.querySelector('.pokemon-list');
+        let listItem = document.createElement('li');
+        let button = document.createElement('button');
+        button.innerText = pokemon.name;
+        button.classList.add('pokemon-button');
+
+        listItem.appendChild(button);
+        ulItem.appendChild(listItem);
+
+        button.addEventListener('click', function () {
+            console.log(pokemon);
+        });
+    }
+
+    function showDetails(pokemon) {
+        console.log(pokemon);
+    }
+
+    return {
+        add: add,
+        getAll: getAll,
+        addListItem: addListItem,
+        showDetails: showDetails
     };
 }());
 
 pokemonRepository.getAll().forEach(function (pokemon) {
     "use strict";
-    console.log(pokemon.name + ' is ' + pokemon.height + ' meters tall.');
-    console.log(pokemon.type + ' is his type and ' + pokemon.abilities + ' are his abilities. ');
+    pokemonRepository.addListItem(pokemon);
 });
-
-
-
-
-
-
-
-
-// for (let i = 0; i < pokemonList.length; i++) {
-//   document.write(pokemonList[i].name + ' (height: ' + pokemonList[i].height + ') ');
-//   if (pokemonList[i].height <= 1.0) {
-//     document.write('<br>');
-//   }
-//   else {
-//     document.write('That\'s a big pokemon!');
-//     document.write('<br>');
-//   }
-// }
-
-// function divide (dividend, divisor) {
-//   if (divisor === 0) {
-//     return 'You\re trying to divide by zero.'
-//   } else {
-//     result = dividend / divisor;
-//     return result;
-//   }
-// }
-
-// console.log(divide(4, 2));
-// console.log(divide(7, 0));
-// console.log(divide(1, 4));
-// console.log(divide(12, -3));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
