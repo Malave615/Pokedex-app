@@ -7,3 +7,15 @@
 .pokemon-logo-wrapper {
 	text-align: center;
 }
+
+.pokemon-button {
+	background-color: #FF0000;
+	color: #FFFFFF;
+	border-radius: 10px;
+	box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+	cursor: pointer;
+}
+
+.pokemon-button:hover {
+	background-color: #FA8072;
+}
