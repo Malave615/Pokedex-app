@@ -2,10 +2,11 @@ Project description:
 To build a small web application with HTML, CSS, and JavaScript that loads
 data from an external API and enables the viewing of data points in detail.
 
-How to get project running:
+This project consist of a Pokedex of Pokemon and their details as well as a portrait of each. All details are linked from an external API.
 
 
-Project Dependencies:
+Project Dependencies: This project was written using HTML, CSS, JavaScript and jQuery. Also included polyfills such as promise-polyfill and fetch-polyfill.
 
 
-Which API does the project use:
+Which API does the project use: 
+https://pokeapi.co/api/v2/pokemon/
