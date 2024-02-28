@@ -1,6 +1,11 @@
 html,
 body {
 	font-family: Arial, sans-serif;
+	background-color: #B2BEB5;
+}
+
+#navbar-nav {
+	flex-direction: row;
 }
 
 .pokemon-logo {
@@ -13,7 +18,21 @@ body {
 	text-align: center;
 }
 
-.pokemon-button {
+.container {
+	background-color: #446376;
+	border-radius: 10px;
+	margin-top: 60px;
+}
+
+.page-header {
+	border-bottom: 2px solid rgb(101, 148, 169);
+}
+
+h3 {
+	color: red;
+}
+
+.btn {
 	background-color: #FF0000;
 	color: #FFFFFF;
 	border-radius: 10px;
@@ -22,55 +41,15 @@ body {
 	margin-bottom: 10px;
 }
 
-.pokemon-button:hover {
+.btn :hover {
 	background-color: #FA8072;
 }
 
-#modal-container {
-	display: none;
-}
-
-#modal-container.is-visible {
-	position: fixed;
-	padding: 20px;
-	box-sizing: border-box;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.5);
-
-	z-index: 999;
-
-	overflow: auto;
-
-	display: grid;
-	text-align: center;
-}
-
-.modal {
+.modal-content {
 	margin: auto;
 	display: inline-block;
-	box-sizing: border-box;
-	background: #fff;
 	padding: 15px;
 	width: 100%;
 	max-width: 700px;
 	text-align: center;
-}
-
-.modal-close {
-	float: right;
-	border: 0;
-	background: none;
-	color: #777;
-	text-decoration: underline;
-}
-
-.modal h1 {
-	margin-top: 0;
-}
-
-.modal p {
-	margin-bottom: 0;
 }
