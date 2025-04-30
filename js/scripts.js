@@ -18,6 +18,20 @@ let pokemonRepository = (function () {
         }
     }
 
+    function filterByName(name) {
+        let containerElement = document.querySelector('.row');
+        let pokemonNames = pokemonList.map(item => item.name);
+    
+        pokemonNames.forEach((element) => {
+            let containerChild = document.querySelector(`[id=${element}]`);
+            if (containerChild) {
+             if (!element.match(name)) {
+               containerElement.removeChild(containerChild);
+             }
+            }
+        });
+    }
+
     function addListItem(pokemon) {
         let pokemonAddList = document.querySelector('.row');
         let li = document.createElement('li');
